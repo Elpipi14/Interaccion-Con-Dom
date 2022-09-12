@@ -10,12 +10,12 @@ class productos {
         this.img = img;
     }
 
+    // Se agrego secion de articulos al html
     listaArticulos() {
         const lista = `
         <div id="tienda" class="card col-md">
             <img src=${this.img} class='img__art' alt="">
                 
-
                     <h2 class="product__price fw-regular">
                         $${this.precio}
                     </h2>
@@ -57,5 +57,5 @@ let susNeu710 = new productos(`8`, "Suspension Neumatica 7.0 10mm", 360000, `./i
 articulos.push(espPro, susFija, susRegC, susRegD, susNeu68, susNeu610, susNeu78, susNeu710);
 
 console.log(articulos)
-
+//se hizo foreach para recorrer el array de articulos para interactuar mediante dom a cada producto creado y realizado por class 
 articulos.forEach(e => { e.listaArticulos() })
